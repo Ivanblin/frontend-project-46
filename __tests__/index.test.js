@@ -15,7 +15,7 @@ describe('get different from two files', () => {
   test.each([
     ['ini'],
     ['yml'],
-    // ['json'],
+    ['json'],
 
   ])('files format - %p', (extension) => {
     const fileOneFullPath = `${process.cwd()}/__fixtures__/file1.${extension}`;
@@ -23,6 +23,6 @@ describe('get different from two files', () => {
     expect(gendiff(fileOneFullPath, FileTwoFullPath, 'stylish')).toEqual(resultStylish.toString());
     expect(gendiff(fileOneFullPath, FileTwoFullPath, 'plain')).toEqual(resultPlain.toString());
     expect(gendiff(fileOneFullPath, FileTwoFullPath, 'json')).toEqual(resultJson.toString());
-    expect(gendiff(fileOneFullPath, FileTwoFullPath)).toEqual(resultJson.toString());
+    expect(gendiff(fileOneFullPath, FileTwoFullPath)).toEqual(resultStylish.toString());
   });
 });
