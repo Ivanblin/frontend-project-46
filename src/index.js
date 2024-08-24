@@ -7,8 +7,8 @@ import format from './formatters/index.js';
 const gendiff = (firstPath, secondPath, formatName = 'stylish') => {
   const firstFilePath = path.resolve(process.cwd(), firstPath);
   const secondFilePath = path.resolve(process.cwd(), secondPath);
-  const firstFileData = fs.readFileSync(firstFilePath, 'utf8');
-  const secondFileData = fs.readFileSync(secondFilePath, 'utf8');
+  const firstFileData = fs.readFileSync(firstFilePath, 'utf-8');
+  const secondFileData = fs.readFileSync(secondFilePath, 'utf-8');
   const firstFileExtension = path.extname(firstFilePath).slice(1);
   const secondFileExtension = path.extname(secondFilePath).slice(1);
   const obj1 = parse(firstFileData, firstFileExtension);
