@@ -1,4 +1,7 @@
 const formatValue = (value) => {
+  if (value == null) {
+    return String(null)
+  }
   if (typeof value === 'object') {
     return '[complex value]';
   }
@@ -16,10 +19,10 @@ const renderPlain = (content) => {
       return `Property '${path}' was added with value: ${formatValue(node.value)}`;
     }
     if (node.state === 'deleted') {
-      return `Property '${path}' was deleted`;
+      return `Property '${path}' was removed`;
     }
     if (node.state === 'changed') {
-      return `Property '${path}' was changed from ${formatValue(node.oldValue)} to ${formatValue(node.newValue)}`;
+      return `Property '${path}' was updated. From ${formatValue(node.oldValue)} to ${formatValue(node.newValue)}`;
     }
     if (node.state === 'unchanged') {
       return [];
