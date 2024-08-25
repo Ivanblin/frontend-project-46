@@ -1,8 +1,8 @@
 import fs from 'fs';
 import gendiff from '../index.js';
 
-let resultStylish;
-let resultPlain;
+let resultStylish = null;
+let resultPlain = null;
 
 beforeAll(() => {
   resultStylish = fs.readFileSync('./__fixtures__/resultStylish.txt');
