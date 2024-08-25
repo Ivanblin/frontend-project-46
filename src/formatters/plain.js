@@ -1,6 +1,6 @@
 const formatValue = (value) => {
   if (value == null) {
-    return String(null)
+    return String(null);
   }
   if (typeof value === 'object') {
     return '[complex value]';

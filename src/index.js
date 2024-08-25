@@ -4,7 +4,6 @@ import parse from './parsers/parsers.js';
 import buildDiff from './compare.js';
 import format from './formatters/index.js';
 
-
 const gendiff = (firstPath, secondPath, formatName = 'stylish') => {
   const firstFilePath = path.resolve(process.cwd(), firstPath);
   const secondFilePath = path.resolve(process.cwd(), secondPath);

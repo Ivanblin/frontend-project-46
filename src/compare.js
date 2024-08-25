@@ -18,7 +18,7 @@ const buildDiff = (obj1, obj2) => {
     if (obj1[key] === obj2[key]) {
       return { key, state: 'unchanged', value: obj2[key] };
     }
-    
+
     return {
       key,
       state: 'changed',

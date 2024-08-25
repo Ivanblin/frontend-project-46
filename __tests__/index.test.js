@@ -3,7 +3,6 @@ import gendiff from '../index.js';
 
 let resultStylish;
 let resultPlain;
-let resultJson;
 
 beforeAll(() => {
   resultStylish = fs.readFileSync('./__fixtures__/resultStylish.txt');
