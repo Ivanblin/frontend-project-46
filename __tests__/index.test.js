@@ -1,12 +1,12 @@
 import fs from 'fs';
 import gendiff from '../index.js';
 
-let resultStylish = null;
-let resultPlain = null;
+let resultStylish; // eslint-disable-line
+let resultPlain; // eslint-disable-line
 
 beforeAll(() => {
-  resultStylish = fs.readFileSync('./__fixtures__/resultStylish.txt');
-  resultPlain = fs.readFileSync('./__fixtures__/resultPlain.txt');
+  resultStylish = fs.readFileSync('./__fixtures__/resultStylish.txt'); // eslint-disable-line
+  resultPlain = fs.readFileSync('./__fixtures__/resultPlain.txt'); // eslint-disable-line
 });
 
 describe('get different from two files', () => {
